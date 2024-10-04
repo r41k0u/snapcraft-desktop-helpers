@@ -13,14 +13,14 @@ parts:
   application:
     source: src/
     plugin: qmake
-    qt-version: qt5
-    after: [qt5]
-  qt5:
+    qt-version: qt6
+    after: [qt6]
+  qt6:
     source: .
     plugin: make
     make-parameters: ["SRC_DIR=../src"]
     build-packages:
-      - qtbase5-dev
+      - qt6-base-dev
       - dpkg-dev
     stage-packages:
       - libxkbcommon0
@@ -28,8 +28,8 @@ parts:
       - dmz-cursor-theme
       - light-themes
       - shared-mime-info
-      - libqt5gui5
+      - libqt6gui6
       - libgdk-pixbuf2.0-0
-      - libqt5svg5 # for loading icon themes which are svg
+      - libqt6svg6 # for loading icon themes which are svg
       - appmenu-qt5
 
